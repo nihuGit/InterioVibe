@@ -1566,7 +1566,7 @@ video {
 }
  /* Custom scrollbar styles */
  .custom-scrollbar::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
@@ -1643,16 +1643,4 @@ video {
   .buttons {
       align-items: center;
   }
-}
-
-.content-box {
-cursor: pointer;
-padding: 16px;
-border-left: 3px solid transparent;
-}
-.content-box:hover {
-background-color: #f8f8f8;
-}
-.active {
-border-color: orange;
 }
