@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "bg-primary": "#FFF",
+        "bg-secondary": "#FAFAFA",
         "text-brand-primary": "#FFF",
         "text-brand-secondary": "#F4EBFF",
         "text-brand-tertiary-alt": "#CC3A02",
@@ -22,14 +23,15 @@ module.exports = {
         "border-tertiary": "#F5F5F5",
         "border-brand": "#EE4A03",
         "border-secondary": "#E9EAEB",
-        "utility-brand-700": "#A6D202",
+        "utility-brand-700": "#A62D02",
         "utility-brand-200": "#FFC2A3",
         "utility-brand-50": "#FFF0E8",
         "bg-tertiary": "#F5F5F5",
         "bg-quaternary": "#E9EAEB", // Fixed spelling
         "fg-quinary": "#A4A7AE",
         "text-brand-secondary-alt": "#A62D02", // Renamed duplicate
-        "text-color":"#0000"
+        "text-color":"#0000",
+        "bg-brand-secondary" : "#F4EBFF"
       },
     },
   },
