@@ -33,6 +33,12 @@ module.exports = {
         "text-color":"#0000",
         "bg-brand-secondary" : "#F4EBFF"
       },
+      maxWidth: {
+        'max-w-large': '91rem',
+      },
+      height: {
+        "85": "22rem", 
+      },
     },
   },
   plugins: [],

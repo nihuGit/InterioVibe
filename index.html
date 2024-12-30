@@ -1,880 +1,1686 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Interior Design Studio">
-  <title>Interior Design</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="input.css">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <style>
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 3px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interior Design Studio" />
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="input.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #f97316; /* Orange color */
-      border-radius: 4px;
-    }
+    <style>
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 3px;
+      }
 
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-    .section-container {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 20px;
-      align-items: center;
-  }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #EE4A03; /* Orange color */
+        border-radius: 4px;
+      }
 
-  .text-container {
-      flex: 1 1 40%;
-      padding: 20px;
-  }
-
-  .text-container h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-  }
-
-  .text-container p {
-      margin-bottom: 20px;
-  }
-
-  .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-  }
-
-  .button {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      cursor: pointer;
-      border-left: 5px solid transparent;
-  }
-
-  .button.active {
-      border-left: 5px solid orange;
-  }
-
-  .button span {
-      margin-left: 10px;
-  }
-
-  .image-container {
-      flex: 1 1 50%;
-      display: flex;
-      justify-content: center;
-  }
-
-  .image-container img {
-      max-width: 100%;
-      height: auto;
-  }
-
-  @media (max-width: 768px) {
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: #d6d7d8;
+      }
       .section-container {
-          flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        align-items: center;
       }
 
       .text-container {
-          text-align: center;
+        flex: 1 1 40%;
+        padding: 20px;
+      }
+
+      .text-container h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .text-container p {
+        margin-bottom: 20px;
       }
 
       .buttons {
-          align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
-  }
-  
-  .content-box {
-    cursor: pointer;
-    padding: 16px;
-    border-left: 3px solid transparent;
-  }
-  .content-box:hover {
-    background-color: #f8f8f8;
-  }
-  .active {
-    border-color: orange;
-  }
-  </style>
-  
-</head>
-<body class="bg-white">
 
-  <!-- First Section -->
-  <section class="flex flex-col items-center justify-center text-center py-12 px-6 sm:px-8 md:px-12 lg:px-24">
-    <h1 class="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold text-text-primary mb-8 max-w-4xl">
-      Creating stylish, functional, and memorable spaces
-    </h1>
-    <p class="text-text-tertiary font-[600px] text-base sm:text-lg md:text-xl mb-12 max-w-lg">
-      - We’re a full-service interior design studio specializing in simple and timeless spaces.
-    </p>
-    <button class="bg-bg-brand-solid text-button-primary-fg px-8 py-4 text-sm sm:text-base font-medium rounded-md hover:bg-orange-500 transition">
-      Contact Us
-    </button>
-    <div class="mt-16 ">
-      <img src="/public/images/Container.png" alt="Decorative Shapes" class="w-full h-auto"" />
-    </div>
-  </section>
+      .button {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        border-left: 5px solid transparent;
+      }
 
+      .button.active {
+        border-left: 5px solid orange;
+      }
 
-  <!-- Trusted by Companies Section -->
-  <section class="lg:py-16 py-12  px-6 sm:px-8 md:px-12 lg:px-24 bg-transparent">
-    <div class="text-center mb-9">
-      <p class="text-gray-600 text-lg sm:text-xl font-medium">
-        Trusted by 4,000+ companies
+      .button span {
+        margin-left: 10px;
+      }
+
+      .image-container {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .section-container {
+          flex-direction: column;
+        }
+
+        .text-container {
+          text-align: center;
+        }
+
+        .buttons {
+          align-items: center;
+        }
+      }
+
+      .content-box {
+        cursor: pointer;
+        padding: 16px;
+        border-left: 3px solid transparent;
+      }
+      .content-box:hover {
+        background-color: #f8f8f8;
+      }
+      .active {
+        border-color: #EE4A03;
+      }
+    </style>
+
+  </head>
+  <body class="bg-white">
+    <!-- First Section -->
+    <section
+      class="flex flex-col items-center justify-center text-center py-12 px-6 sm:px-8 md:px-12 lg:px-24"
+    >
+      <h1
+        class="text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold text-text-primary mb-8 max-w-4xl"
+      >
+        Creating stylish, functional, and memorable spaces
+      </h1>
+      <p
+        class="text-text-tertiary font-[600px] text-base sm:text-lg md:text-xl mb-12 max-w-lg"
+      >
+        - We’re a full-service interior design studio specializing in simple and
+        timeless spaces.
       </p>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-      <div class="flex justify-center items-center">
-        <img  src="/public/images/Mangolia_Vector.png" alt="Vector" class="w-12 h-8">
-        <span class="ml-2 text-gray-800 font-semibold">StackedLab</span>
+      <button
+        class="bg-bg-brand-solid text-button-primary-fg px-8 py-4 text-sm sm:text-base font-medium rounded-md hover:bg-orange-500 transition"
+      >
+        Contact Us
+      </button>
+      <div class="mt-16">
+        <img
+          src="/public/images/Container.png"
+          alt="Decorative Shapes"
+          class="max-w-full h-auto"
+        />
       </div>
-      <div class="flex justify-center items-center">
-        <img  src="/public/images/Mangolia_Vector.png" alt="Vector" class="w-12 h-8">
-        <span class="ml-2 text-gray-800 font-semibold">Magnolia</span>
-      </div>
-      <div class="flex justify-center items-center">
-        <img  src="/public/images/Power_Vector.png" alt="Vector" class="w-12 h-8">
-        <span class="ml-2 text-gray-800 font-semibold">Powersurge</span>
-      </div>
-      <div class="flex justify-center items-center">
-        <img  src="/public/images/Wraped_Vector.png" alt="Vector" class="w-12 h-8">
-        <span class="ml-2 text-gray-800 font-semibold">WarpSpeed</span>
-      </div>
-      <div class="flex justify-center items-center">
-        <img  src="/public/images/LeapYear_Union.png" alt="Vector" class="w-12 h-8">
-        <span class="ml-2 text-gray-800 font-semibold">LeapYear</span>
-      </div>
-      <div class="flex justify-center items-center">
-        <img  src="/public/images/LeapYear_Union.png" alt="Vector" class="w-12 h-8">
-        <span class="ml-2 text-gray-800 font-semibold">EasyTask</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Reasons to Trust Section -->
-  <section class="lg:py-24 py-16 px-6 sm:px-12 lg:px-24">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-      <!-- Left Column -->
-      <div class="md:px-4">
-        <div class="flex flex-col  mb-4">
-          <div class="bg-bg-brand-secondary border-bg-brand-secondary border-2 w-fit text-fg-brand-primary p-3 rounded-full">
-            <ion-icon name="flash-outline" class="text-2xl"></ion-icon>
-          </div>
-          <h2 class="text-3xl mt-3 font-bold text-gray-900">Reasons to Trust</h2>
+    <!-- Trusted by Companies Section -->
+    <section
+      class="relative max-w-[91rem] mx-auto lg:py-16 py-12 px-6 sm:px-8 md:px-12 lg:px-24 bg-transparent overflow-hidden"
+    >
+      <!-- Left and right fading effect -->
+      <div class="absolute inset-0 pointer-events-none">
+        <!-- Left fade -->
+        <div
+          class="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white via-white/70 to-transparent"
+        ></div>
+        <!-- Right fade -->
+        <div
+          class="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white/70 to-transparent"
+        ></div>
+      </div>
+
+      <!-- Section Content -->
+      <div class="relative z-10">
+        <div class="text-center mb-9">
+          <p class="text-gray-600 text-lg sm:text-xl font-medium">
+            Trusted by 4,000+ companies
+          </p>
         </div>
-        <p class="text-gray-600 text-base sm:text-lg">
-          Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users.
+
+        <!-- Logo Grid -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center"
+        >
+          <div class="flex justify-center items-center">
+            <img
+              src="/public/images/Mangolia_Vector.png"
+              alt="StackedLab"
+              class="w-12 h-8"
+            />
+            <span class="ml-2 text-gray-800 font-bold text-base md:text-lg lg:text-2xl">StackedLab</span>
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              src="/public/images/Mangolia_Vector.png"
+              alt="Magnolia"
+              class="w-12 h-8"
+            />
+            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">Magnolia</span>
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              src="/public/images/Power_Vector.png"
+              alt="Powersurge"
+              class="w-12 h-8"
+            />
+            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">Powersurge</span>
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              src="/public/images/Wraped_Vector.png"
+              alt="WarpSpeed"
+              class="w-12 h-8"
+            />
+            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">WarpSpeed</span>
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              src="/public/images/LeapYear_Union.png"
+              alt="LeapYear"
+              class="w-12 h-8"
+            />
+            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">LeapYear</span>
+          </div>
+          <div class="flex justify-center items-center">
+            <img
+              src="/public/images/LeapYear_Union.png"
+              alt="EasyTask"
+              class="w-12 h-8"
+            />
+            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">EasyTask</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reasons to Trust Section -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Left Column -->
+        <div class="md:px-4">
+          <div class="flex flex-col mb-4">
+            <div
+              class="bg-bg-brand-secondary border-bg-brand-secondary border-2 w-fit text-fg-brand-primary p-3 rounded-full"
+            >
+              <ion-icon name="flash-outline" class="text-2xl"></ion-icon>
+            </div>
+            <h2 class="text-3xl mt-3 font-bold text-gray-900">
+              Reasons to Trust
+            </h2>
+          </div>
+          <p class="text-gray-600 text-base sm:text-lg">
+            Powerful, self-serve product and growth analytics to help you
+            convert, engage, and retain more users.
+          </p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-12">
+          <div class="md:px-4">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Share team inboxes
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Whether you have a team of 2 or 200, our shared team inboxes keep
+              everyone on the same page and in the loop.
+            </p>
+          </div>
+          <div class="md:px-4">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Deliver instant answers
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              An all-in-one customer service platform that helps you balance
+              everything your customers need to be happy.
+            </p>
+          </div>
+          <div class="md:px-4">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Manage your team with reports
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Measure what matters with Untitled's easy-to-use reports. You can
+              filter, export, and drill down on the data in a couple of clicks.
+            </p>
+          </div>
+          <div class="md:px-4">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Connect with customers
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Solve a problem or close a sale in real-time with chat. If no one
+              is available, customers are seamlessly routed to email without
+              confusion.
+            </p>
+          </div>
+          <div class="md:px-4">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Connect the tools you already use
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Explore 100+ integrations that make your day-to-day workflow more
+              efficient and familiar. Plus, our extensive developer tools.
+            </p>
+          </div>
+          <div class="md:px-4">
+            <h3 class="text-lg font-semibold text-gray-900">
+              Our people make the difference
+            </h3>
+            <p class="text-gray-600 text-sm sm:text-base">
+              We’re an extension of your customer service team, and all of our
+              resources are free. Chat to our friendly team 24/7 when you need
+              help.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique Selling Points Section -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <p class="text-utility-brand-700 font-medium uppercase text-sm mb-4">
+          Features
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+          Unique Selling Points
+        </h2>
+        <p class="text-gray-600 text-md sm:text-lg max-w-xl mx-auto">
+          Powerful, self-serve product and growth analytics to help you convert,
+          engage, and retain more users. Trusted by over 4,000 startups.
         </p>
       </div>
 
-      <!-- Right Column -->
-      <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-12">
-        <div class="md:px-4">
-          <h3 class="text-lg font-semibold text-gray-900">Share team inboxes</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <!-- Feature 1 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4"
+          >
+            <ion-icon name="mail-outline" class="text-2xl"></ion-icon>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            Share team inboxes
+          </h3>
+          <p class="text-gray-600 text-md sm:text-base">
+            Whether you have a team of 2 or 200, our shared team inboxes keep
+            everyone on the same page and in the loop.
           </p>
         </div>
-        <div class="md:px-4">
-          <h3 class="text-lg font-semibold text-gray-900">Deliver instant answers</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            An all-in-one customer service platform that helps you balance everything your customers need to be happy.
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4"
+          >
+            <ion-icon name="flash-outline" class="text-2xl"></ion-icon>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            Deliver instant answers
+          </h3>
+          <p class="text-gray-600 text-md sm:text-base">
+            An all-in-one customer service platform that helps you balance
+            everything your customers need to be happy.
           </p>
         </div>
-        <div class="md:px-4">
-          <h3 class="text-lg font-semibold text-gray-900">Manage your team with reports</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            Measure what matters with Untitled's easy-to-use reports. You can filter, export, and drill down on the data in a couple of clicks.
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4"
+          >
+            <ion-icon name="analytics-outline" class="text-2xl"></ion-icon>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            Manage your team with reports
+          </h3>
+          <p class="text-gray-600 text-md sm:text-base">
+            Measure what matters with Untitled's easy-to-use reports. You can
+            filter, export, and drill down on the data in a couple clicks.
           </p>
         </div>
-        <div class="md:px-4">
-          <h3 class="text-lg font-semibold text-gray-900">Connect with customers</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.
+
+        <!-- Feature 4 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4"
+          >
+            <ion-icon name="chatbubbles-outline" class="text-2xl"></ion-icon>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            Connect with customers
+          </h3>
+          <p class="text-gray-600 text-md sm:text-base">
+            Solve a problem or close a sale in real-time with chat. If no one is
+            available, customers are seamlessly routed to email without
+            confusion.
           </p>
         </div>
-        <div class="md:px-4">
-          <h3 class="text-lg font-semibold text-gray-900">Connect the tools you already use</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools.
+
+        <!-- Feature 5 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4"
+          >
+            <ion-icon name="layers-outline" class="text-2xl"></ion-icon>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            Connect the tools you already use
+          </h3>
+          <p class="text-gray-600 text-md sm:text-base">
+            Explore 100+ integrations that make your day-to-day workflow more
+            efficient and familiar. Plus, our extensive developer tools.
           </p>
         </div>
-        <div class="md:px-4">
-          <h3 class="text-lg font-semibold text-gray-900">Our people make the difference</h3>
-          <p class="text-gray-600 text-sm sm:text-base">
-            We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.
+
+        <!-- Feature 6 -->
+        <div class="flex flex-col items-center text-center">
+          <div
+            class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4"
+          >
+            <ion-icon name="people-outline" class="text-2xl"></ion-icon>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            Our people make the difference
+          </h3>
+          <p class="text-gray-600 text-md sm:text-base">
+            We’re an extension of your customer service team, and all of our
+            resources are free. Chat to our friendly team 24/7 when you need
+            help.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- Unique Selling Points Section -->
-<section class="lg:py-24 py-16 px-6 sm:px-12 lg:px-24">
-  <!-- Heading -->
-  <div class="text-center mb-12">
-    <p class="text-utility-brand-700 font-medium uppercase text-sm mb-4">Features</p>
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Unique Selling Points</h2>
-    <p class="text-gray-600 text-md sm:text-lg max-w-xl mx-auto">
-      Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.
-    </p>
-  </div>
-
-  <!-- Features Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 ">
-    <!-- Feature 1 -->
-    <div class="flex flex-col items-center text-center">
-      <div class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4">
-        <ion-icon name="mail-outline" class="text-2xl"></ion-icon>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Share team inboxes</h3>
-      <p class="text-gray-600 text-md sm:text-base ">
-        Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.
-      </p>
-    </div>
-
-    <!-- Feature 2 -->
-    <div class="flex flex-col items-center text-center">
-      <div class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4">
-        <ion-icon name="flash-outline" class="text-2xl"></ion-icon>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Deliver instant answers</h3>
-      <p class="text-gray-600 text-md sm:text-base">
-        An all-in-one customer service platform that helps you balance everything your customers need to be happy.
-      </p>
-    </div>
-
-    <!-- Feature 3 -->
-    <div class="flex flex-col items-center text-center">
-      <div class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4">
-        <ion-icon name="analytics-outline" class="text-2xl"></ion-icon>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Manage your team with reports</h3>
-      <p class="text-gray-600 text-md sm:text-base">
-        Measure what matters with Untitled's easy-to-use reports. You can filter, export, and drill down on the data in a couple clicks.
-      </p>
-    </div>
-
-    <!-- Feature 4 -->
-    <div class="flex flex-col items-center text-center">
-      <div class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4">
-        <ion-icon name="chatbubbles-outline" class="text-2xl"></ion-icon>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Connect with customers</h3>
-      <p class="text-gray-600 text-md sm:text-base">
-        Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.
-      </p>
-    </div>
-
-    <!-- Feature 5 -->
-    <div class="flex flex-col items-center text-center">
-      <div class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4">
-        <ion-icon name="layers-outline" class="text-2xl"></ion-icon>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Connect the tools you already use</h3>
-      <p class="text-gray-600 text-md sm:text-base">
-        Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools.
-      </p>
-    </div>
-
-    <!-- Feature 6 -->
-    <div class="flex flex-col items-center text-center">
-      <div class="bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4">
-        <ion-icon name="people-outline" class="text-2xl"></ion-icon>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Our people make the difference</h3>
-      <p class="text-gray-600 text-md sm:text-base">
-        We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<section class="lg:py-24 py-16 px-6 sm:px-12 lg:px-24">
-  <div class="flex flex-col lg:flex-row items-center ">
-    <div class="text-center lg:text-left">
-      <h2 class="text-text-primary text-2xl lg:text-5xl sm:text-3xl font-semibold">Build something great</h2>
-      <p class="text-gray-600 text-lg  mt-8">Everything you need to build modern UI and great products.</p>
-    </div>
-    <div class="w-fit mx-auto mt-8 lg:mt-0">
-      <button class="bg-bg-brand-solid text-white py-4 px-8 mx-auto text-sm sm:text-base font-medium rounded-xl hover:bg-orange-700 transition">Contact Us</button>
-    </div>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12  md:mt-16 lg:mt-22">
-    <div class="text-start px-4 space-y-4">
-      <h3 class="text-orange-600 text-5xl lg:text-6xl font-semibold">400+</h3>
-      <p class="text-gray-800 text-xl font-semibold">Projects completed</p>
-      <p class="text-gray-600 text-base">We’ve helped build over 400 amazing projects.</p>
-    </div>
-    <div class="text-start px-4 space-y-4">
-      <h3 class="text-orange-600 text-5xl lg:text-6xl font-semibold">600%</h3>
-      <p class="text-gray-800 text-xl font-semibold">Return on investment</p>
-      <p class="text-gray-600 text-base">Our customers have reported an average of ~600% ROI.</p>
-    </div>
-    <div class="text-start px-4 space-y-4">
-      <h3 class="text-orange-600 text-5xl lg:text-6xl font-semibold">10k</h3>
-      <p class="text-gray-800 text-xl font-semibold">Global downloads</p>
-      <p class="text-gray-600 text-base">Our free UI kit has been downloaded over 100k times.</p>
-    </div>
-    <div class="text-start px-4 space-y-4">
-      <h3 class="text-orange-600 text-5xl lg:text-6xl font-semibold">200+</h3>
-      <p class="text-gray-800 text-xl font-semibold">5-star reviews</p>
-      <p class="text-gray-600 text-base">We’re proud of our 5-star rating with over 200 reviews.</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="lg:py-24 py-16 px-6 sm:px-12 lg:px-24">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-    <!-- Left Section -->
-    <divn class="space-y-4">
-      <p class="text-text-brand-secondary-alt font-semibold">New feature</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold text-gray-900 mt-2">Proven Strategies</h2>
-      <p class="text-gray-600 mt-4 md:text-xl  pr-5">Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.</p>
-    </divn>
-
-    <!-- Right Section -->
-    <div>
-      <div class="bg-transparent rounded-lg overflow-y-auto max-h-72 p-6 border-none custom-scrollbar">
-        <ul class="space-y-4">
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Share team inboxes</h3>
-            <p class="text-gray-600 text-lg">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Deliver instant answers</h3>
-            <p class="text-gray-600 text-lg">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Manage your team with reports</h3>
-            <p class="text-gray-600 text-lg">Measure what matters with easy-to-use reports. Filter, export, and drill down on the data in a couple clicks.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Integrate with your tools</h3>
-            <p class="text-gray-600 text-lg">Easily connect to the tools you already use to streamline your workflows and improve efficiency.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Customizable workflows</h3>
-            <p class="text-gray-600 text-lg">Tailor the platform to match your unique business processes and save time on repetitive tasks.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <div class="text-center mb-6 space-y-4">
-    <p class="text-text-brand-secondary-alt text-sm md:text-base font-bold">Pricing</p>
-    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900">Plans that fit your scale</h2>
-    <p class="text-gray-600 text-base md:text-xl">Simple, transparent pricing that grows with you. Try any plan free for 30 days.</p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 md:mt-16">
-    <!-- Basic Plan Card -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg relative">
-      <h3 class="text-xl font-semibold text-gray-900">Basic plan</h3>
-      <div class="absolute top-4 right-4 bg-orange-100 border-2 border-orange-500 text-orange-500 text-xs font-semibold px-2 py-1 rounded-full">Popular</div>
-      <p class="text-text-primary font-bold  text-4xl md:text-6xl mt-4">$10 <span class="text-gray-600 text-lg font-semibold">per month</span></p>
-      <p class="text-gray-600 mt-4">Basic features for up to 10 users.</p>
-      <hr class="my-4 border-t border-gray-300" />
-      <div id="basic-card" class="mt-4 transition-all overflow-hidden max-h-40">
-        <h4 class="text-gray-900 font-medium">FEATURES</h4>
-        <h5 class="text-gray-900 font-normal">Everything in Starter plus....</h5>
-        <ul class="mt-2 text-gray-600 space-y-1">
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Access to basic features</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Basic reporting and analytics</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Up to 10 individual users</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> 20 GB individual data each user</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Basic chat and email support</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Dedicated account manager</li>
-        </ul>
-      </div>
-      <button onclick="toggleCard('basic-card')" class="text-orange-500 font-medium mt-4">View More</button>
-    </div>
-
-    <!-- Business Plan Card -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg">
-      <h3 class="text-xl font-semibold text-gray-900">Business plan</h3>
-      <p class="text-text-primary font-bold mt-4 text-4xl md:text-6xl ">$20 <span class="text-gray-600 text-lg font-semibold">per month</span></p>
-      <p class="text-gray-600 mt-4">Advanced features and reporting.</p>
-      <hr class="my-4 border-t border-gray-300" />
-      <div id="business-card" class="mt-4 transition-all overflow-hidden max-h-40">
-        <h4 class="text-gray-900 font-medium">FEATURES</h4>
-        <h5 class="text-gray-900 font-normal">Everything in Starter plus....</h5>
-        <ul class="mt-2 text-gray-600 space-y-1">
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Everything in Basic plus...</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Advanced reporting</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Priority support</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Integration with third-party tools</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Dedicated account manager</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Custom dashboards</li>
-        </ul>
-      </div>
-      <button onclick="toggleCard('business-card')" class="text-orange-500 font-medium mt-4">View More</button>
-    </div>
-
-    <!-- Enterprise Plan Card -->
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-lg">
-      <h3 class="text-xl font-semibold text-gray-900">Enterprise plan</h3>
-      <p class="text-text-primary font-bold mt-4 text-4xl md:text-6xl ">$40 <span class="text-gray-600 text-lg font-semibold">per month</span></p>
-      <p class="text-gray-600 mt-4">Unlimited features.</p>
-      <hr class="my-4 border-t border-gray-300" />
-      <div id="enterprise-card" class="mt-4 transition-all overflow-hidden max-h-40">
-        <h4 class="text-gray-900 text-base font-medium">FEATURES</h4>
-        <h5 class="text-gray-900 font-normal">Everything in Starter plus....</h5>
-        <ul class="mt-2 text-gray-600 space-y-1">
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Everything in Business plus...</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Unlimited data and users</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Custom integrations</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Dedicated 24/7 support</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Personalized onboarding</li>
-          <li><ion-icon name="checkmark-circle" class="text-orange-500 mr-2"></ion-icon> Dedicated account manager</li>
-        </ul>
-      </div>
-      <button onclick="toggleCard('enterprise-card')" class="text-orange-500 font-medium mt-4">View More</button>
-    </div>
-  </div>
-</section>
-
-<section class="lg:py-24 py-16 px-6 sm:px-12 lg:px-24">
-  <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4 max-w-3xl">How growth.cx's framework stands out and helps you in SEO?</h2>
-  <p class="text-gray-600 mb-8 text-base md:text-lg lg:text-xl">We've been designing and building beautiful digital products since 2018.</p>
-
-  <div class="relative flex flex-col md:flex-row">
-    <!-- Sidebar with scroll indicator -->
-    <div class="relative md:w-1/3">
-      <div class="scroll-indicator" id="scroll-indicator" style="top: 0; height: 60px;"></div>
-      <div class="space-y-4">
-        <div id="box-1" class="content-box active" onclick="changeContent(1)">
-          <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Share team inboxes</h3>
-          <p class="text-gray-600 text-base md:text-lg ">Keep everyone on the same page and in the loop.</p>
+    <!-- Build somehitng great -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <div class="flex flex-col lg:flex-row">
+        <div class="text-center lg:text-start">
+          <h2
+            class="text-text-primary text-3xl md:text-4xl lg:text-5xl sm:text-3xl font-semibold"
+          >
+            Build something great
+          </h2>
+          <p class="text-gray-600 text-lg mt-8">
+            Everything you need to build modern UI and great products.
+          </p>
         </div>
-        <div id="box-2" class="content-box" onclick="changeContent(2)">
-          <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Deliver instant answers</h3>
-          <p class="text-gray-600 text-base md:text-lg ">Balance everything your customers need to be happy.</p>
-        </div>
-        <div id="box-3" class="content-box" onclick="changeContent(3)">
-          <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Manage your team with reports</h3>
-          <p class="text-gray-600 text-base md:text-lg ">Filter, export, and drill down on data in a couple of clicks.</p>
+        <div class="w-fit mx-auto mt-8 lg:mt-0">
+          <button
+            class="bg-bg-brand-solid text-white py-4 px-8 mx-auto text-sm sm:text-base font-medium rounded-xl hover:bg-orange-700 transition"
+          >
+            Contact Us
+          </button>
         </div>
       </div>
-    </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 md:mt-16 lg:mt-22"
+      >
+        <div class="text-start lg:pr-4 space-y-4">
+          <h3 class="text-text-brand-tertiary-alt text-5xl lg:text-6xl font-semibold">
+            400+
+          </h3>
+          <p class="text-gray-800 text-xl font-semibold">Projects completed</p>
+          <p class="text-gray-600 text-base">
+            We’ve helped build over 400 amazing projects.
+          </p>
+        </div>
+        <div class="text-start lg:px-4 space-y-4">
+          <h3 class="text-text-brand-tertiary-alt text-5xl lg:text-6xl font-semibold">
+            600%
+          </h3>
+          <p class="text-gray-800 text-xl font-semibold">
+            Return on investment
+          </p>
+          <p class="text-gray-600 text-base">
+            Our customers have reported an average of ~600% ROI.
+          </p>
+        </div>
+        <div class="text-start lg:px-4 space-y-4">
+          <h3 class="text-text-brand-tertiary-alt text-5xl lg:text-6xl font-semibold">
+            10k
+          </h3>
+          <p class="text-gray-800 text-xl font-semibold">Global downloads</p>
+          <p class="text-gray-600 text-base">
+            Our free UI kit has been downloaded over 100k times.
+          </p>
+        </div>
+        <div class="text-start lg:pl-4 space-y-4">
+          <h3 class="text-text-brand-tertiary-alt text-5xl lg:text-6xl font-semibold">
+            200+
+          </h3>
+          <p class="text-gray-800 text-xl font-semibold">5-star reviews</p>
+          <p class="text-gray-600 text-base">
+            We’re proud of our 5-star rating with over 200 reviews.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Image Section -->
-    <div class="md:w-2/3 flex justify-center">
-      <div class="w-full max-w-xl">
-        <img id="laptop-image" src="/public/images/Mockup_wrap_01.png" alt="Dashboard" class="rounded-none shadow-none">
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- provren strategies -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Left Section -->
+        <divn class="space-y-4">
+          <p class="text-text-brand-secondary-alt font-semibold">New feature</p>
+          <h2 class="text-4xl lg:text-5xl font-semibold text-gray-900 mt-2">
+            Proven Strategies
+          </h2>
+          <p class="text-gray-600 mt-4 md:text-xl pr-5">
+            Powerful, self-serve product and growth analytics to help you
+            convert, engage, and retain more users. Trusted by over 4,000
+            startups.
+          </p>
+        </divn>
 
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">  
-  <h2 class="text-center text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-10">Trusted by 4,000+ Industries</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
-      <!-- Card 1 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="logo-windows" class="text-blue-600 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Wildcrafted</span>
+        <!-- Right Section -->
+        <div>
+          <div
+            class="bg-transparent rounded-lg overflow-y-auto max-h-[22rem] py-6 px-4 lg:p-6 border-none custom-scrollbar"
+          >
+            <ul class="space-y-4">
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Share team inboxes
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Whether you have a team of 2 or 200, our shared team inboxes
+                  keep everyone on the same page and in the loop.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Deliver instant answers
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  An all-in-one customer service platform that helps you balance
+                  everything your customers need to be happy.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Manage your team with reports
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Measure what matters with easy-to-use reports. Filter, export,
+                  and drill down on the data in a couple clicks.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Integrate with your tools
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Easily connect to the tools you already use to streamline your
+                  workflows and improve efficiency.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Customizable workflows
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Tailor the platform to match your unique business processes
+                  and save time on repetitive tasks.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <!-- Card 2 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="flower-outline" class="text-pink-500 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Magnolia</span>
-      </div>
-      <!-- Card 3 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="layers-outline" class="text-blue-500 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Stack&d Lab</span>
-      </div>
-      <!-- Card 4 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="speedometer-outline" class="text-gray-800 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Warpspeed</span>
-      </div>
-      <!-- Card 5 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="medical-outline" class="text-green-500 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Clandestine</span>
-      </div>
-      <!-- Card 6 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="camera-outline" class="text-black text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Shutterframe</span>
-      </div>
-      <!-- Card 7 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="flash-outline" class="text-purple-500 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Powersurge</span>
-      </div>
-      <!-- Card 8 -->
-      <div class="flex items-center justify-center w-full h-36 bg-gray-100 rounded-lg shadow-sm">
-          <ion-icon name="calendar-outline" class="text-yellow-500 text-3xl"></ion-icon>
-          <span class="ml-2 font-semibold text-gray-700 text-xl lg:text-2xl">Leapyear</span>
-      </div>
-  </div>
-</section>
+    </section>
 
-<section class="lg:py-24 py-16 px-6 sm:px-12 lg:px-24">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-    <!-- Left Section -->
-    <divn class="space-y-4">
-      <p class="text-text-brand-secondary-alt font-semibold">New feature</p>
-      <h2 class="text-4xl lg:text-5xl font-semibold text-gray-900 mt-2">Proven Strategies</h2>
-      <p class="text-gray-600 mt-4 md:text-xl  pr-5">Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.</p>
-    </divn>
-
-    <!-- Right Section -->
-    <div>
-      <div class="bg-transparent rounded-lg overflow-y-auto max-h-72 p-6 border-none custom-scrollbar">
-        <ul class="space-y-4">
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Share team inboxes</h3>
-            <p class="text-gray-600 text-lg">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Deliver instant answers</h3>
-            <p class="text-gray-600 text-lg">An all-in-one customer service platform that helps you balance everything your customers need to be happy.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Manage your team with reports</h3>
-            <p class="text-gray-600 text-lg">Measure what matters with easy-to-use reports. Filter, export, and drill down on the data in a couple clicks.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Integrate with your tools</h3>
-            <p class="text-gray-600 text-lg">Easily connect to the tools you already use to streamline your workflows and improve efficiency.</p>
-          </li>
-          <li class="space-y-2">
-            <h3 class="text-xl font-bold text-text-primary">Customizable workflows</h3>
-            <p class="text-gray-600 text-lg">Tailor the platform to match your unique business processes and save time on repetitive tasks.</p>
-          </li>
-        </ul>
+    <!-- Pricing Section -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-20 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <div class="text-center mb-6 space-y-4">
+        <p class="text-text-brand-secondary-alt text-sm md:text-base font-bold">
+          Pricing
+        </p>
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900">
+          Plans that fit your scale
+        </h2>
+        <p class="text-gray-600 text-base md:text-xl">
+          Simple, transparent pricing that grows with you. Try any plan free for
+          30 days.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<section class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <!-- Left Content -->
-  <div class="text-center md:text-left">
-      <h2 class="text-xl md:text-3xl lg:text-4xl font-semibold text-gray-800">Start your free trial</h2>
-      <p class="text-lg md:text-xl lg:text-2xl text-gray-700 mt-2">+91 86382 37537</p>
-      <p class="text-base md:text-lg lg:text-xl text-gray-500 mt-1">Join over 4,000+ startups already growing with Untitled.</p>
-  </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 mt-10 md:mt-16">
+        <!-- Basic Plan Card -->
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm relative"
+        >
+          <h3 class="text-xl font-semibold text-gray-900">Basic plan</h3>
+          <div
+            class="absolute top-4 right-4 bg-utility-brand-50 border-2 border-utility-brand-200 text-utility-brand-700 text-xs font-semibold px-2 py-1 rounded-full"
+          >
+            Popular
+          </div>
+          <p class="text-text-primary font-bold text-4xl md:text-6xl mt-4">
+            $10
+            <span class="text-gray-600 text-lg font-semibold">per month</span>
+          </p>
+          <p class="text-gray-600 mt-4 text-base lg:text-lg">
+            Basic features for up to 10 users.
+          </p>
+          <hr class="my-9 mx-0 border-gray-300 w-full h-1" />
+          <div
+          class="card-content mt-4 transition-all overflow-hidden max-h-72"
+  data-card="basic"
+          >
+            <h4 class="text-gray-900 font-medium text-xl">FEATURES</h4>
+            <h5 class="text-gray-900 font-normal text-lg">
+              Everything in Starter plus....
+            </h5>
+            <ul class="mt-5 text-gray-600">
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Access to basic features
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Basic reporting and analytics
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Up to 10 individual users
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                20 GB individual data each user
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Basic chat and email support
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Dedicated account manager
+              </li>
+            </ul>
+          </div>
+          <button
+            class="toggle-btn text-fg-brand-primary font-medium mt-4 text-base"
+  data-card="basic"
+          >
+            View More
+          </button>
+        </div>
 
-  <!-- Right Button -->
-  <div class="mt-6 md:mt-0">
-      <button class="px-8 py-4 bg-bg-brand-solid text-white text-sm font-medium rounded-lg shadow-md hover:bg-orange-700 transition duration-300">
+        <!-- Business Plan Card -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-semibold text-gray-900">Business plan</h3>
+          <p class="text-text-primary font-bold mt-4 text-4xl md:text-6xl">
+            $20
+            <span class="text-gray-600 text-lg font-semibold">per month</span>
+          </p>
+          <p class="text-gray-600 mt-4 text-base lg:text-lg">
+            Advanced features and reporting.
+          </p>
+          <hr class="my-9 border-gray-300 w-full" />
+          <div
+           class="card-content mt-4 transition-all overflow-hidden max-h-72"
+  data-card="business"
+          >
+            <h4 class="text-gray-900 font-medium text-xl">FEATURES</h4>
+            <h5 class="text-gray-900 font-normal text-lg">
+              Everything in Starter plus....
+            </h5>
+            <ul class="mt-5 text-gray-600">
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Everything in Basic plus...
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Advanced reporting
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Priority support
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Integration with third-party tools
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Dedicated account manager
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Custom dashboards
+              </li>
+            </ul>
+          </div>
+          <button
+            class="toggle-btn text-fg-brand-primary font-medium mt-4 text-base"
+    data-card="business"
+          >
+            View More
+          </button>
+        </div>
+
+        <!-- Enterprise Plan Card -->
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm "  id="last-card">
+          <h3 class="text-xl font-semibold text-gray-900">Enterprise plan</h3>
+          <p class="text-text-primary font-bold mt-4 text-4xl md:text-6xl">
+            $40
+            <span class="text-gray-600 text-lg font-semibold">per month</span>
+          </p>
+          <p class="text-gray-600 mt-4 text-base lg:text-lg">
+            Unlimited features.
+          </p>
+          <hr class="my-9 border-gray-300 w-full" />
+          <div
+            class="card-content mt-4 transition-all overflow-hidden max-h-72"
+  data-card="enterprise"
+          >
+            <h4 class="text-gray-900 font-medium text-xl">FEATURES</h4>
+            <h5 class="text-gray-900 font-normal text-lg">
+              Everything in Starter plus....
+            </h5>
+            <ul class="mt-5 text-gray-600">
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Everything in Business plus...
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Unlimited data and users
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary-500 mr-2"
+                ></ion-icon>
+                Custom integrations
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Dedicated 24/7 support
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Personalized onboarding
+              </li>
+              <li class="text-lg mb-4">
+                <ion-icon
+                  name="checkmark-circle"
+                  class="text-fg-brand-primary mr-2"
+                ></ion-icon>
+                Dedicated account manager
+              </li>
+            </ul>
+          </div>
+          <button
+           class="toggle-btn text-fg-brand-primary font-medium mt-4 text-base"
+    data-card="enterprise"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Growth Section -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <h2
+        class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4 max-w-3xl"
+      >
+        How growth.cx's framework stands out and helps you in SEO?
+      </h2>
+      <p class="text-gray-600 mb-8 text-base md:text-lg lg:text-xl">
+        We've been designing and building beautiful digital products since 2018.
+      </p>
+
+      <div class="relative flex flex-col lg:flex-row">
+        <!-- Sidebar with scroll indicator -->
+        <div class="relative lg:w-1/3">
+          <div
+            class="scroll-indicator"
+            id="scroll-indicator"
+            style="top: 0; height: 60px"
+          ></div>
+          <div class="space-y-4">
+            <div
+              id="box-1"
+              class="content-box active"
+              onclick="changeContent(1)"
+            >
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800"
+              >
+                Share team inboxes
+              </h3>
+              <p class="text-gray-600 text-base md:text-lg">
+                Keep everyone on the same page and in the loop.
+              </p>
+            </div>
+            <div id="box-2" class="content-box" onclick="changeContent(2)">
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800"
+              >
+                Deliver instant answers
+              </h3>
+              <p class="text-gray-600 text-base md:text-lg">
+                Balance everything your customers need to be happy.
+              </p>
+            </div>
+            <div id="box-3" class="content-box" onclick="changeContent(3)">
+              <h3
+                class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800"
+              >
+                Manage your team with reports
+              </h3>
+              <p class="text-gray-600 text-base md:text-lg">
+                Filter, export, and drill down on data in a couple of clicks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="lg:w-2/3 flex justify-center mt-10 lg:mt-0">
+          <div class="w-full max-w-xl">
+            <img
+              id="laptop-image"
+              src="/public/images/Mockup_wrap_01.png"
+              alt="Dashboard"
+              class="rounded-none shadow-none"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Section -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <h2
+        class="text-center text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-10"
+      >
+        Trusted by 4,000+ Industries
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+        <!-- Card 1 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="logo-windows"
+            class="text-blue-600 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Wildcrafted</span
+          >
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="flower-outline"
+            class="text-pink-500 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Magnolia</span
+          >
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="layers-outline"
+            class="text-blue-500 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Stack&d Lab</span
+          >
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="speedometer-outline"
+            class="text-gray-800 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Warpspeed</span
+          >
+        </div>
+        <!-- Card 5 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="medical-outline"
+            class="text-green-500 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Clandestine</span
+          >
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="camera-outline"
+            class="text-black text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Shutterframe</span
+          >
+        </div>
+        <!-- Card 7 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="flash-outline"
+            class="text-purple-500 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Powersurge</span
+          >
+        </div>
+        <!-- Card 8 -->
+        <div
+          class="flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="calendar-outline"
+            class="text-yellow-500 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Leapyear</span
+          >
+        </div>
+        <!-- Card 9 for medium screen -->
+        <div
+          class="hidden md:flex lg:hidden items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm"
+        >
+          <ion-icon
+            name="calendar-outline"
+            class="text-yellow-500 text-base md:text-3xl"
+          ></ion-icon>
+          <span class="ml-2 font-semibold text-gray-700 text-base lg:text-2xl"
+            >Leapyear</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- provren strategies -->
+    <section
+      class="max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Left Section -->
+        <divn class="space-y-4">
+          <p class="text-text-brand-secondary-alt font-semibold">New feature</p>
+          <h2 class="text-4xl lg:text-5xl font-semibold text-gray-900 mt-2">
+            Proven Strategies
+          </h2>
+          <p class="text-gray-600 mt-4 md:text-xl pr-5">
+            Powerful, self-serve product and growth analytics to help you
+            convert, engage, and retain more users. Trusted by over 4,000
+            startups.
+          </p>
+        </divn>
+
+        <!-- Right Section -->
+        <div>
+          <div
+            class="bg-transparent rounded-lg overflow-y-auto max-h-[22rem] py-6 px-4 lg:p-6 border-none custom-scrollbar"
+          >
+            <ul class="space-y-4">
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Share team inboxes
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Whether you have a team of 2 or 200, our shared team inboxes
+                  keep everyone on the same page and in the loop.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Deliver instant answers
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  An all-in-one customer service platform that helps you balance
+                  everything your customers need to be happy.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Manage your team with reports
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Measure what matters with easy-to-use reports. Filter, export,
+                  and drill down on the data in a couple clicks.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Integrate with your tools
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Easily connect to the tools you already use to streamline your
+                  workflows and improve efficiency.
+                </p>
+              </li>
+              <li class="space-y-2">
+                <h3 class="text-xl font-bold text-text-primary">
+                  Customizable workflows
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  Tailor the platform to match your unique business processes
+                  and save time on repetitive tasks.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      class="flex flex-col md:flex-row justify-between max-w-[91rem] mx-auto lg:py-12 py-8 px-6 sm:px-12 lg:px-24"
+    >
+      <!-- Left Content -->
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-text-primary">
+          Start your free trial
+        </h2>
+        <p class="text-lg md:text-xl lg:text-2xl text-text-primary mt-2">
+          +91 86382 37537
+        </p>
+        <p class="text-base md:text-lg lg:text-xl text-gray-500 mt-1">
+          Join over 4,000+ startups already growing with Untitled.
+        </p>
+      </div>
+
+      <!-- Right Button -->
+      <div class="mt-6 md:mt-0 mx-auto md:mx-0">
+        <button
+          class="px-8 py-4 bg-bg-brand-solid text-white text-sm font-medium rounded-lg shadow-md hover:bg-orange-700 transition duration-300"
+        >
           Contact Us
-      </button>
-  </div>
-</section>
-
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-24 py-16 md:px-8 text-center">
-  <!-- Testimonial Text -->
-  <p class="text-lg md:text-xl lg:text-4xl font-medium text-gray-800 leading-relaxed max-w-5xl mx-auto">
-      Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.
-  </p>
-
-  <!-- User Details -->
-  <div class="mt-6 flex flex-col items-center">
-      <img src="https://github.com/shadcn.png" alt="User Image" class="w-12 md:w-16 h-12 md:h-16 rounded-full shadow-md mt-3">
-      <p class="mt-3 font-semibold text-base md:text-lg text-gray-800">Caitlyn King</p>
-      <p class=" text-gray-500 text-base md:text-lg">Head of Design, Layers</p>
-
-      <!-- Star Ratings -->
-      <div class="flex mt-3 space-x-1">
-          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"></path>
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"></path>
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"></path>
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"></path>
-          </svg>
-          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"></path>
-          </svg>
+        </button>
       </div>
+    </section>
 
-      <!-- Pagination -->
-      <div class="flex mt-4 space-x-2">
+    <!-- Testimonial Section -->
+    <section
+      class="max-w-[91rem] mx-auto px-4 sm:px-6  lg:px-8 lg:py-24 py-16 md:px-12 text-center"
+    >
+      <!-- Testimonial Text -->
+      <p
+        class="text-lg md:text-xl lg:text-4xl font-medium text-gray-800 leading-relaxed max-w-5xl mx-auto"
+      >
+        Love the simplicity of the service and the prompt customer support. We
+        can’t imagine working without it.
+      </p>
+
+      <!-- User Details -->
+      <div class="mt-6 flex flex-col items-center">
+        <img
+          src="https://github.com/shadcn.png"
+          alt="User Image"
+          class="w-12 md:w-16 h-12 md:h-16 rounded-full shadow-md mt-3"
+        />
+        <p class="mt-3 font-semibold text-base md:text-lg text-gray-800">
+          Caitlyn King
+        </p>
+        <p class="text-gray-500 text-base md:text-lg">Head of Design, Layers</p>
+
+        <!-- Star Ratings -->
+        <div class="flex mt-3 space-x-1">
+          <svg
+            class="w-5 h-5 text-yellow-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"
+            ></path>
+          </svg>
+          <svg
+            class="w-5 h-5 text-yellow-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"
+            ></path>
+          </svg>
+          <svg
+            class="w-5 h-5 text-yellow-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"
+            ></path>
+          </svg>
+          <svg
+            class="w-5 h-5 text-yellow-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"
+            ></path>
+          </svg>
+          <svg
+            class="w-5 h-5 text-yellow-500"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927a1 1 0 011.902 0l1.614 4.956a1 1 0 00.95.69h5.21a1 1 0 01.592 1.806l-4.217 3.066a1 1 0 00-.364 1.118l1.614 4.956a1 1 0 01-1.536 1.118L10 15.347l-4.217 3.066a1 1 0 01-1.536-1.118l1.614-4.956a1 1 0 00-.364-1.118L1.28 9.379a1 1 0 01.592-1.806h5.21a1 1 0 00.95-.69L9.049 2.927z"
+            ></path>
+          </svg>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex mt-4 space-x-2">
           <div class="w-2.5 h-2.5 bg-orange-600 rounded-full"></div>
           <div class="w-2.5 h-2.5 bg-gray-300 rounded-full"></div>
           <div class="w-2.5 h-2.5 bg-gray-300 rounded-full"></div>
-      </div>
-  </div>
-</section>
-
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 p-6 ">
-  <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4 text-center">Frequently Asked Questions</h2>
-  <p class="text-gray-600 mb-6 text-base md:text-lg lg:text-xl text-center">Everything you need to know about the product and billing.</p>
-
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4 lg:mt-8">
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Is there a free trial available?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Can I change my plan later?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can change your plan anytime from your account settings.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Can I change my plan later?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can change your plan anytime from your account settings.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Can I change my plan later?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can change your plan anytime from your account settings.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Can I change my plan later?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can change your plan anytime from your account settings.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Can I change my plan later?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can change your plan anytime from your account settings.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">What is your cancellation policy?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">You can cancel your subscription anytime. Upon cancellation, you will retain access to your account until the end of your billing cycle.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">Can other info be added to an invoice?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Yes, you can add additional information to your invoice from the billing settings.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">How does billing work?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">Billing is done on a monthly basis. You will receive an invoice via email at the start of each billing cycle.</p>
-      </div>
-    </div>
-
-    <div class="accordion border-b border-gray-200 py-4">
-      <div class="accordion-header flex justify-between items-center cursor-pointer">
-        <h3 class="text-lg font-medium">How do I change my account email?</h3>
-        <ion-icon name="add-outline" class="accordion-icon text-xl"></ion-icon>
-      </div>
-      <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0">
-        <p class="text-gray-600 mt-4">You can change your account email from the profile settings section.</p>
-      </div>
-    </div>
-  </div>
-
-  
-  
-</section>
-
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-24 py-16">
-  <h2 class="text-text-brand-secondary-alt text-sm font-semibold mb-4">Our blog</h2>
-  <h3 class="text-4xl md:text-5xl font-semibold mb-4 lg:mb-6">The latest writings from our team</h3>
-  <p class="text-gray-600 text-base md:text-lg lg:text-xl">The latest industry news, interviews, technologies, and resources.</p>
-
-  <!-- Buttons -->
-  <div class="flex mx-auto justify-center space-x-0 flex-wrap  rounded-md bg-bg-secondary w-fit border-2 border-bg-secondary mt-10 md:mt-14 lg:mt-16">
-    <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md">View all</button>
-    <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md">Design</button>
-    <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md">Product</button>
-    <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md">Software Engineering</button>
-    <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md">Customer Success</button>
-  </div>
-
-  <!-- Blog Cards -->
-  <div class=" max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mt-14 lg:mt-16">
-    <!-- Card 1 -->
-    <div class="bg-white rounded-none shadow-none overflow-hidden group">
-      <div class="relative">
-        <img src="/public/images/blog_image01.png" alt="Blog Image" class="w-full h-48 object-cover">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800  p-4 text-white text-sm">
-          <span>Olivia Rhye</span>
-          <span>• 20 Jan 2025</span>
-          <span class="float-right">Design</span>
         </div>
       </div>
-      <div class="py-4">
-        <h4 class="text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600">UX review presentations</h4>
-        <p class="text-gray-600 mb-4">How do you create compelling presentations that wow your colleagues and impress your managers?</p>
-        <a href="#" class="text-orange-600 font-semibold">Read post <span>&rarr;</span></a>
-      </div>
-    </div>
+    </section>
 
-    <!-- Card 2 -->
-    <div class="bg-white rounded-none shadow-none overflow-hidden group">
-      <div class="relative">
-        <img src="/public/images/blog_image01.png" alt="Blog Image" class="w-full h-48 object-cover">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent p-4 text-white text-sm">
-          <span>Olivia Rhye</span>
-          <span>• 20 Jan 2025</span>
-          <span class="float-right">Design</span>
+    <!-- FAQ Section -->
+    <section 
+    class="max-w-[91rem] mx-auto lg:py-12 py-8 px-6 sm:px-12 lg:px-24">
+      <h2
+        class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4 text-center"
+      >
+        Frequently Asked Questions
+      </h2>
+      <p class="text-gray-600 mb-6 text-base md:text-lg lg:text-xl text-center">
+        Everything you need to know about the product and billing.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4 lg:mt-8">
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">
+              Is there a free trial available?
+            </h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can try us for free for 30 days. If you want, we'll
+              provide you with a free, personalized 30-minute onboarding call to
+              get you up and running as soon as possible.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">Can I change my plan later?</h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can change your plan anytime from your account settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">Can I change my plan later?</h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can change your plan anytime from your account settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">Can I change my plan later?</h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can change your plan anytime from your account settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">Can I change my plan later?</h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can change your plan anytime from your account settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">Can I change my plan later?</h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can change your plan anytime from your account settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">
+              What is your cancellation policy?
+            </h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              You can cancel your subscription anytime. Upon cancellation, you
+              will retain access to your account until the end of your billing
+              cycle.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">
+              Can other info be added to an invoice?
+            </h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Yes, you can add additional information to your invoice from the
+              billing settings.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">How does billing work?</h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              Billing is done on a monthly basis. You will receive an invoice
+              via email at the start of each billing cycle.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion border-b border-gray-200 py-4">
+          <div
+            class="accordion-header flex justify-between items-center cursor-pointer"
+          >
+            <h3 class="text-lg font-medium">
+              How do I change my account email?
+            </h3>
+            <ion-icon
+              name="add-outline"
+              class="accordion-icon text-xl"
+            ></ion-icon>
+          </div>
+          <div
+            class="accordion-content overflow-hidden transition-max-height duration-300 ease-in-out max-h-0"
+          >
+            <p class="text-gray-600 mt-4">
+              You can change your account email from the profile settings
+              section.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="py-4">
-        <h4 class="text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600">Migrating to Linear 101</h4>
-        <p class="text-gray-600 mb-4">Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.</p>
-        <a href="#" class="text-orange-600 font-semibold">Read post <span>&rarr;</span></a>
-      </div>
-    </div>
+    </section>
 
-    <!-- Card 3 -->
-    <div class="bg-white rounded-none shadow-none overflow-hidden group">
-      <div class="relative">
-        <img src="/public/images/blog_image01.png" alt="Blog Image" class="w-full h-48 object-cover">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent p-4 text-white text-sm">
-          <span>Olivia Rhye</span>
-          <span>• 20 Jan 2025</span>
-          <span class="float-right">Design</span>
+    <!-- Blog section -->
+    <section
+     class="max-w-[91rem] mx-auto lg:py-12 py-8 px-6 sm:px-12 lg:px-24">
+      <h2 class="text-text-brand-secondary-alt text-sm font-semibold mb-4">
+        Our blog
+      </h2>
+      <h3 class="text-4xl md:text-5xl font-semibold mb-4 lg:mb-6">
+        The latest writings from our team
+      </h3>
+      <p class="text-gray-600 text-base md:text-lg lg:text-xl">
+        The latest industry news, interviews, technologies, and resources.
+      </p>
+
+      <!-- Buttons -->
+      <div
+        class="flex mx-auto justify-center space-x-0 flex-wrap rounded-md bg-bg-secondary w-fit border-2 border-bg-secondary mt-10 md:mt-14 lg:mt-16"
+      >
+        <button
+          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+        >
+          View all
+        </button>
+        <button
+          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+        >
+          Design
+        </button>
+        <button
+          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+        >
+          Product
+        </button>
+        <button
+          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+        >
+          Software Engineering
+        </button>
+        <button
+          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+        >
+          Customer Success
+        </button>
+      </div>
+
+      <!-- Blog Cards -->
+      <div
+        class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mt-14 lg:mt-16"
+      >
+        <!-- Card 1 -->
+        <div class="bg-white rounded-none shadow-none overflow-hidden group">
+          <div class="relative">
+            <img
+              src="/public/images/blog_image01.png"
+              alt="Blog Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 p-4 text-white text-sm"
+            >
+              <span>Olivia Rhye</span>
+              <span>• 20 Jan 2025</span>
+              <span class="float-right">Design</span>
+            </div>
+          </div>
+          <div class="py-4">
+            <h4
+              class="text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600"
+            >
+              UX review presentations
+            </h4>
+            <p class="text-gray-600 mb-4">
+              How do you create compelling presentations that wow your
+              colleagues and impress your managers?
+            </p>
+            <a href="#" class="text-orange-600 font-semibold"
+              >Read post <span>&rarr;</span></a
+            >
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-none shadow-none overflow-hidden group">
+          <div class="relative">
+            <img
+              src="/public/images/blog_image01.png"
+              alt="Blog Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent p-4 text-white text-sm"
+            >
+              <span>Olivia Rhye</span>
+              <span>• 20 Jan 2025</span>
+              <span class="float-right">Design</span>
+            </div>
+          </div>
+          <div class="py-4">
+            <h4
+              class="text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600"
+            >
+              Migrating to Linear 101
+            </h4>
+            <p class="text-gray-600 mb-4">
+              Linear helps streamline software projects, sprints, tasks, and bug
+              tracking. Here’s how to get started.
+            </p>
+            <a href="#" class="text-orange-600 font-semibold"
+              >Read post <span>&rarr;</span></a
+            >
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-none shadow-none overflow-hidden group">
+          <div class="relative">
+            <img
+              src="/public/images/blog_image01.png"
+              alt="Blog Image"
+              class="w-full h-48 object-cover"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent p-4 text-white text-sm"
+            >
+              <span>Olivia Rhye</span>
+              <span>• 20 Jan 2025</span>
+              <span class="float-right">Design</span>
+            </div>
+          </div>
+          <div class="py-4">
+            <h4
+              class="text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600"
+            >
+              Building your API stack
+            </h4>
+            <p class="text-gray-600 mb-4">
+              The rise of RESTful APIs has been met by a rise in tools for
+              creating, testing, and managing them.
+            </p>
+            <a href="#" class="text-orange-600 font-semibold"
+              >Read post <span>&rarr;</span></a
+            >
+          </div>
         </div>
       </div>
-      <div class="py-4">
-        <h4 class="text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600">Building your API stack</h4>
-        <p class="text-gray-600 mb-4">The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.</p>
-        <a href="#" class="text-orange-600 font-semibold">Read post <span>&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<script>
-  function toggleCard(cardId) {
-    const card = document.getElementById(cardId);
-    card.classList.toggle('max-h-40');
-    card.classList.toggle('max-h-full');
-  }
-
-  function changeImage(button) {
-    // Remove active class from all buttons
-    document.querySelectorAll('.button').forEach(btn => btn.classList.remove('active'));
-
-    // Add active class to clicked button
-    button.classList.add('active');
-
-    // Change image in the laptop mockup
-    const imageSrc = button.getAttribute('data-image');
-    document.getElementById('laptop-image').src = imageSrc;
-}
-function changeContent(index) {
-  // Image mapping
-  const images = [
-    "/public/images/Mockup_wrap_01.png",
-    "/public/images/Mockup_wrap_02.png",
-    "/public/images/Mockup_wrap_03.png"
-  ];
-
-  // Scroll positions
-  const scrollPositions = [0, 60, 120];
-
-  // Update the laptop image
-  const laptopImage = document.getElementById('laptop-image');
-  laptopImage.src = images[index - 1];
-
-  // Update the scroll indicator position
-  
-
-  // Update active box style
-  document.querySelectorAll('.content-box').forEach((box, idx) => {
-    if (idx === index - 1) {
-      box.classList.add('active');
-    } else {
-      box.classList.remove('active');
-    }
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const accordions = document.querySelectorAll(".accordion");
-
-  accordions.forEach((accordion) => {
-    const header = accordion.querySelector(".accordion-header");
-    const content = accordion.querySelector(".accordion-content");
-    const icon = accordion.querySelector(".accordion-icon");
-
-    header.addEventListener("click", () => {
-      const isOpen = content.classList.contains("max-h-[1000px]");
-
-      // Close all accordions first
-      accordions.forEach((acc) => {
-        acc.querySelector(".accordion-content").classList.remove("max-h-[1000px]");
-        acc.querySelector(".accordion-icon").name = "add-outline";
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButtons = document.querySelectorAll(".toggle-btn");
+        const cardContents = document.querySelectorAll(".card-content");
+      
+        toggleButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const isExpanded = button.textContent === "View Less";
+      
+            // Update all cards and buttons
+            cardContents.forEach((cardContent) => {
+              if (isExpanded) {
+                // Collapse all cards
+                cardContent.style.maxHeight = "18rem";
+                cardContent.classList.remove("expanded");
+              } else {
+                // Expand all cards
+                cardContent.style.maxHeight = cardContent.scrollHeight + "px";
+                cardContent.classList.add("expanded");
+              }
+            });
+      
+            // Update all button texts
+            toggleButtons.forEach((btn) => {
+              btn.textContent = isExpanded ? "View More" : "View Less";
+            });
+          });
+        });
       });
+      
+      
+      //last card middle position
+      // Function to toggle classes based on the screen size
+function toggleCardClasses() {
+  const lastCard = document.getElementById('last-card');
+  if (!lastCard) return;
 
-      // Toggle the clicked accordion
-      if (!isOpen) {
-        content.classList.add("max-h-[1000px]");
-        icon.name = "remove-outline";
-      } else {
-        content.classList.remove("max-h-[1000px]");
-        icon.name = "add-outline";
+  // Check if the screen width is greater than or equal to 768px (md breakpoint in Tailwind)
+  if (window.innerWidth <= 768) {
+    // Add the 'md:col-span-2' and 'md:mx-auto' classes on medium screens
+    lastCard.classList.add('md:col-span-2', 'md:mx-auto');
+  } else {
+    // Remove those classes when the screen size is smaller than md breakpoint
+    lastCard.classList.remove('md:col-span-2', 'md:mx-auto');
+  }
+}
+
+// Call the function initially to set the correct classes on page load
+toggleCardClasses();
+
+// Add a resize event listener to adjust the classes when the window is resized
+window.addEventListener('resize', toggleCardClasses);
+
+
+
+      //
+      function changeImage(button) {
+        // Remove active class from all buttons
+        document
+          .querySelectorAll(".button")
+          .forEach((btn) => btn.classList.remove("active"));
+
+        // Add active class to clicked button
+        button.classList.add("active");
+
+        // Change image in the laptop mockup
+        const imageSrc = button.getAttribute("data-image");
+        document.getElementById("laptop-image").src = imageSrc;
       }
-    });
-  });
-});
-</script>
-</body>
+      function changeContent(index) {
+        // Image mapping
+        const images = [
+          "/public/images/Mockup_wrap_01.png",
+          "/public/images/Mockup_wrap_02.png",
+          "/public/images/Mockup_wrap_03.png",
+        ];
+
+        // Scroll positions
+        const scrollPositions = [0, 60, 120];
+
+        // Update the laptop image
+        const laptopImage = document.getElementById("laptop-image");
+        laptopImage.src = images[index - 1];
+
+        // Update the scroll indicator position
+
+        // Update active box style
+        document.querySelectorAll(".content-box").forEach((box, idx) => {
+          if (idx === index - 1) {
+            box.classList.add("active");
+          } else {
+            box.classList.remove("active");
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const accordions = document.querySelectorAll(".accordion");
+
+        accordions.forEach((accordion) => {
+          const header = accordion.querySelector(".accordion-header");
+          const content = accordion.querySelector(".accordion-content");
+          const icon = accordion.querySelector(".accordion-icon");
+
+          header.addEventListener("click", () => {
+            const isOpen = content.classList.contains("max-h-[1000px]");
+
+            // Close all accordions first
+            accordions.forEach((acc) => {
+              acc
+                .querySelector(".accordion-content")
+                .classList.remove("max-h-[1000px]");
+              acc.querySelector(".accordion-icon").name = "add-outline";
+            });
+
+            // Toggle the clicked accordion
+            if (!isOpen) {
+              content.classList.add("max-h-[1000px]");
+              icon.name = "remove-outline";
+            } else {
+              content.classList.remove("max-h-[1000px]");
+              icon.name = "add-outline";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
