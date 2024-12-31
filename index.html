@@ -108,6 +108,9 @@
       .active {
         border-color: #EE4A03;
       }
+      /* .custom-overlay{
+        background: linear-gradient(to top, rgba(191, 191, 191, 0.814), rgba(220, 220, 220, 0.737));
+      } */
     </style>
 
   </head>
@@ -145,17 +148,7 @@
     <section
       class="relative max-w-[91rem] mx-auto lg:py-16 py-12 px-6 sm:px-8 md:px-12 lg:px-24 bg-transparent overflow-hidden"
     >
-      <!-- Left and right fading effect -->
-      <div class="absolute inset-0 pointer-events-none">
-        <!-- Left fade -->
-        <div
-          class="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white via-white/70 to-transparent"
-        ></div>
-        <!-- Right fade -->
-        <div
-          class="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white/70 to-transparent"
-        ></div>
-      </div>
+      
 
       <!-- Section Content -->
       <div class="relative z-10">
@@ -165,6 +158,17 @@
           </p>
         </div>
 
+        <!-- Left and right fading effect -->
+      <div class="absolute inset-0 pointer-events-none ">
+        <!-- Left fade -->
+        <div
+          class="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-white via-white/95 to-transparent hidden sm:block"
+        ></div>
+        <!-- Right fade -->
+        <div
+          class="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white via-white/95 to-transparent hidden sm:block"
+        ></div>
+      </div>
         <!-- Logo Grid -->
         <div
           class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center"
@@ -173,7 +177,7 @@
             <img
               src="/public/images/Mangolia_Vector.png"
               alt="StackedLab"
-              class="w-12 h-8"
+              class="w-12 h-8 lg:hidden"
             />
             <span class="ml-2 text-gray-800 font-bold text-base md:text-lg lg:text-2xl">StackedLab</span>
           </div>
@@ -215,7 +219,7 @@
               alt="EasyTask"
               class="w-12 h-8"
             />
-            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">EasyTask</span>
+            <span class="ml-2 text-gray-800 font-bold lg:text-2xl">EasyTa<span class="lg:hidden">sk</span></span>
           </div>
         </div>
       </div>
@@ -871,7 +875,7 @@
         </div>
 
         <!-- Image Section -->
-        <div class="lg:w-2/3 flex justify-center mt-10 lg:mt-0">
+        <div class="lg:w-2/3 flex justify-center mt-16 md:mt-20 lg:mt-0">
           <div class="w-full max-w-xl">
             <img
               id="laptop-image"
@@ -1427,27 +1431,27 @@
         class="flex mx-auto justify-center space-x-0 flex-wrap rounded-md bg-bg-secondary w-fit border-2 border-bg-secondary mt-10 md:mt-14 lg:mt-16"
       >
         <button
-          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+          class="px-4 py-2 text-sm font-medium text-text-secondary bg-transparent hover:bg-bg-primary hover:shadow-lg focus:bg-bg-primary focus:shadow-lg focus:border-2 focus:border-border-primary active:bg-bg-primary active:shadow-lg active:border-2 active:border-border-primary rounded-md"
         >
           View all
         </button>
         <button
-          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+          class="px-4 py-2 text-sm font-medium text-text-secondary bg-transparent hover:bg-bg-primary hover:shadow-lg focus:bg-bg-primary focus:shadow-lg focus:border-2 focus:border-border-primary active:bg-bg-primary active:shadow-lg active:border-2 active:border-border-primary rounded-md"
         >
           Design
         </button>
         <button
-          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+          class="px-4 py-2 text-sm font-medium text-text-secondary bg-transparent hover:bg-bg-primary hover:shadow-lg focus:bg-bg-primary focus:shadow-lg focus:border-2 focus:border-border-primary active:bg-bg-primary active:shadow-lg active:border-2 active:border-border-primary rounded-md"
         >
           Product
         </button>
         <button
-          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+          class="px-4 py-2 text-sm font-medium text-text-secondary bg-transparent hover:bg-bg-primary hover:shadow-lg focus:bg-bg-primary focus:shadow-lg focus:border-2 focus:border-border-primary active:bg-bg-primary active:shadow-lg active:border-2 active:border-border-primary rounded-md"
         >
           Software Engineering
         </button>
         <button
-          class="px-4 py-2 text-sm font-medium text-gray-700 bg-transparent hover:bg-white hover:shadow-lg focus:bg-white focus:outline-none active:bg-white border-b-2 border-transparent rounded-md"
+          class="px-4 py-2 text-sm font-medium text-text-secondary bg-transparent hover:bg-bg-primary hover:shadow-lg focus:bg-bg-primary focus:shadow-lg focus:border-2 focus:border-border-primary active:bg-bg-primary active:shadow-lg active:border-2 active:border-border-primary rounded-md"
         >
           Customer Success
         </button>
@@ -1455,23 +1459,25 @@
 
       <!-- Blog Cards -->
       <div
-        class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mt-14 lg:mt-16"
+        class=" mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mt-14 lg:mt-16"
       >
         <!-- Card 1 -->
-        <div class="bg-white rounded-none shadow-none overflow-hidden group">
+        <div class=" rounded-none shadow-none overflow-hidden group">
           <div class="relative">
             <img
-              src="/public/images/blog_image01.png"
+              src="/public/images/blogImage01.jpg"
               alt="Blog Image"
-              class="w-full h-48 object-cover"
+              class="w-full h-72 object-cover"
             />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 p-4 text-white text-sm"
+            <!-- <div
+              class="custom-overlay absolute bottom-0 left-0 text-white text-base w-full h-24 container flex justify-between px-6 py-4"
             >
-              <span>Olivia Rhye</span>
-              <span>• 20 Jan 2025</span>
-              <span class="float-right">Design</span>
+            <div class="flex-col">
+              <p>Olivia Rhye</p>
+              <p>20 Jan 2025</p>
             </div>
+              <p class="ml-auto">Design</p>
+            </div> -->
           </div>
           <div class="py-4">
             <h4
@@ -1493,17 +1499,19 @@
         <div class="bg-white rounded-none shadow-none overflow-hidden group">
           <div class="relative">
             <img
-              src="/public/images/blog_image01.png"
+              src="/public/images/blogImage02.jpg"
               alt="Blog Image"
-              class="w-full h-48 object-cover"
+              class="w-full h-72 object-cover"
             />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent p-4 text-white text-sm"
+            <!-- <div
+              class="custom-overlay absolute bottom-0 left-0 text-white text-base w-full h-24 container flex justify-between px-6 py-4"
             >
-              <span>Olivia Rhye</span>
-              <span>• 20 Jan 2025</span>
-              <span class="float-right">Design</span>
+            <div class="flex-col">
+              <p>Olivia Rhye</p>
+              <p>20 Jan 2025</p>
             </div>
+              <p class="ml-auto">Design</p>
+            </div> -->
           </div>
           <div class="py-4">
             <h4
@@ -1525,17 +1533,19 @@
         <div class="bg-white rounded-none shadow-none overflow-hidden group">
           <div class="relative">
             <img
-              src="/public/images/blog_image01.png"
+              src="/public/images/blogImage03.jpg"
               alt="Blog Image"
-              class="w-full h-48 object-cover"
+              class="w-full h-72 object-cover"
             />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent p-4 text-white text-sm"
-            >
-              <span>Olivia Rhye</span>
-              <span>• 20 Jan 2025</span>
-              <span class="float-right">Design</span>
-            </div>
+            <!-- <div
+            class="custom-overlay absolute bottom-0 left-0 text-white text-base w-full h-24 container flex justify-between px-6 py-4"
+          >
+          <div class="flex-col">
+            <p>Olivia Rhye</p>
+            <p>20 Jan 2025</p>
+          </div>
+            <p class="ml-auto">Design</p>
+          </div> -->
           </div>
           <div class="py-4">
             <h4
