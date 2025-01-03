@@ -1,0 +1,631 @@
+
+/* utility.css */
+
+.section-container {
+    @apply flex flex-col items-center justify-center text-center py-12 px-6 sm:px-8 md:px-12 lg:px-24;
+  }
+  
+  .section-heading {
+    @apply text-3xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold text-text-primary mb-8 max-w-4xl;
+  }
+  
+  .section-paragraph {
+    @apply text-text-tertiary font-[600px] text-base sm:text-lg md:text-xl mb-12 max-w-lg;
+  }
+  
+  .contact-button {
+    @apply bg-bg-brand-solid text-button-primary-fg px-8 py-4 text-sm sm:text-base font-medium rounded-md hover:bg-orange-500 transition;
+  }
+  
+  .image-container {
+    @apply mt-16;
+  }
+  
+  .image-style {
+    @apply max-w-full h-auto;
+  }
+  
+
+  /* 2 dn section */
+
+.section-container {
+    @apply relative max-w-[91rem] mx-auto lg:py-16 py-12 px-6 sm:px-8 md:px-12 lg:px-24 bg-transparent overflow-hidden;
+  }
+  
+  .section-content {
+    @apply relative z-10;
+  }
+  
+  .text-center-heading {
+    @apply text-center mb-9;
+  }
+  
+  .text-gray-paragraph {
+    @apply text-gray-600 text-lg sm:text-xl font-medium;
+  }
+  
+  .fade-effect-container {
+    @apply absolute inset-0 pointer-events-none;
+  }
+  
+  .left-fade {
+    @apply absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-white via-white/95 to-transparent hidden sm:block;
+  }
+  
+  .right-fade {
+    @apply absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white via-white/95 to-transparent hidden sm:block;
+  }
+  
+  .logo-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center;
+  }
+  
+  .logo-item {
+    @apply flex justify-center items-center;
+  }
+  
+  .logo-image {
+    @apply w-12 h-8;
+  }
+  
+  .logo-text {
+    @apply ml-2 text-gray-800 font-bold text-base md:text-lg lg:text-2xl;
+  }
+  
+  .logo-text-hidden {
+    @apply lg:hidden;
+  }
+  
+
+  /* 3 rd section */
+  /* utility.css */
+
+.section-container {
+    @apply relative max-w-[91rem] mx-auto lg:py-16 py-12 px-6 sm:px-8 md:px-12 lg:px-24 bg-transparent overflow-hidden;
+  }
+  
+  .section-content {
+    @apply relative z-10;
+  }
+  
+  .text-center-heading {
+    @apply text-center mb-9;
+  }
+  
+  .text-gray-paragraph {
+    @apply text-gray-600 text-lg sm:text-xl font-medium;
+  }
+  
+  .fade-effect-container {
+    @apply absolute inset-0 pointer-events-none;
+  }
+  
+  .left-fade {
+    @apply absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-white via-white/95 to-transparent hidden sm:block;
+  }
+  
+  .right-fade {
+    @apply absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white via-white/95 to-transparent hidden sm:block;
+  }
+  
+  .logo-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center;
+  }
+  
+  .logo-item {
+    @apply flex justify-center items-center;
+  }
+  
+  .logo-image {
+    @apply w-12 h-8;
+  }
+  
+  .logo-text {
+    @apply ml-2 text-gray-800 font-bold text-base md:text-lg lg:text-2xl;
+  }
+  
+  .logo-text-hidden {
+    @apply lg:hidden;
+  }
+
+  /* 4rd section */
+/* Section Container */
+.section-container {
+    @apply max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24;
+  }
+  
+  /* Section Header */
+  .section-header {
+    @apply text-center mb-12;
+  }
+  
+  .header-tagline {
+    @apply text-utility-brand-700 font-medium uppercase text-sm mb-4;
+  }
+  
+  .header-title {
+    @apply text-3xl sm:text-4xl font-bold text-gray-900 mb-6;
+  }
+  
+  .header-description {
+    @apply text-gray-600 text-md sm:text-lg max-w-xl mx-auto;
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12;
+  }
+  
+  .feature-card {
+    @apply flex flex-col items-center text-center;
+  }
+  
+  .icon-container {
+    @apply bg-bg-primary text-fg-secondary p-3 rounded-lg border-1 shadow-md mb-4;
+  }
+  
+  .feature-title {
+    @apply text-lg font-semibold text-gray-900 mb-2;
+  }
+  
+  .feature-description {
+    @apply text-gray-600 text-md sm:text-base;
+  }
+  
+/*  */
+/* Section Container */
+.section-container {
+    @apply max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24;
+  }
+  
+  /* Flex Layout */
+  .flex-layout {
+    @apply flex flex-col lg:flex-row;
+  }
+  
+  .text-left-center {
+    @apply text-center lg:text-start;
+  }
+  
+  /* Heading */
+  .heading-title {
+    @apply text-text-primary text-3xl md:text-4xl lg:text-5xl sm:text-3xl font-semibold;
+  }
+  
+  .heading-description {
+    @apply text-gray-600 text-lg mt-8;
+  }
+  
+  /* Button Container */
+  .button-container {
+    @apply w-fit mx-auto mt-8 lg:mt-0;
+  }
+  
+  .button {
+    @apply bg-bg-brand-solid text-white py-4 px-8 mx-auto text-sm sm:text-base font-medium rounded-xl hover:bg-orange-700 transition;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 md:mt-16 lg:mt-22;
+  }
+  
+  /* Stat Item */
+  .stat-item {
+    @apply text-start space-y-4;
+  }
+  
+  .stat-number {
+    @apply text-text-brand-tertiary-alt text-5xl lg:text-6xl font-semibold;
+  }
+  
+  .stat-title {
+    @apply text-gray-800 text-xl font-semibold;
+  }
+  
+  .stat-description {
+    @apply text-gray-600 text-base;
+  }
+  
+  /* Custom Spacing for Stat Item */
+  .stat-left {
+    @apply lg:pr-4;
+  }
+  
+  .stat-middle {
+    @apply lg:px-4;
+  }
+  
+  .stat-right {
+    @apply lg:pl-4;
+  }
+  
+
+  /*  */
+  /* Section Container */
+.section-container {
+    @apply max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24;
+  }
+  
+  /* Grid Layout */
+  .grid-layout {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  }
+  
+  /* Left Section */
+  .left-section {
+    @apply space-y-4;
+  }
+  
+  .left-section-title {
+    @apply text-text-brand-secondary-alt font-semibold;
+  }
+  
+  .left-section-heading {
+    @apply text-4xl lg:text-5xl font-semibold text-gray-900 mt-2;
+  }
+  
+  .left-section-description {
+    @apply text-gray-600 mt-4 md:text-xl pr-5;
+  }
+  
+  /* Right Section */
+  .right-section {
+    @apply bg-transparent rounded-lg overflow-y-auto max-h-[22rem] py-6 px-4 lg:p-6 border-none custom-scrollbar;
+  }
+  
+  .list-item {
+    @apply space-y-2;
+  }
+  
+  .list-item-heading {
+    @apply text-xl font-bold text-text-primary;
+  }
+  
+  .list-item-description {
+    @apply text-gray-600 text-lg;
+  }
+  
+
+  /*  */
+  /* Section Container */
+.section-container {
+    @apply max-w-[91rem] mx-auto lg:py-20 py-16 px-6 sm:px-12 lg:px-24;
+  }
+  
+  /* Text Center Section */
+  .text-center-section {
+    @apply text-center mb-6 space-y-4;
+  }
+  
+  .section-title {
+    @apply text-text-brand-secondary-alt text-sm md:text-base font-bold;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold text-gray-900;
+  }
+  
+  .section-description {
+    @apply text-gray-600 text-base md:text-xl;
+  }
+  
+  /* Grid Layout */
+  .grid-layout {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-16;
+  }
+  
+  /* Plan Card */
+  .card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm relative;
+  }
+  
+  .card-popular {
+    @apply absolute top-4 right-4 bg-utility-brand-50 border-2 border-utility-brand-200 text-utility-brand-700 text-xs font-semibold px-2 py-1 rounded-full;
+  }
+  
+  .card-price {
+    @apply text-text-primary font-bold text-4xl md:text-6xl mt-4;
+  }
+  
+  .card-price-subtext {
+    @apply text-gray-600 text-lg font-semibold;
+  }
+  
+  .card-description {
+    @apply text-gray-600 mt-4 text-base lg:text-lg;
+  }
+  
+  .card-hr {
+    @apply my-9 mx-0 border-gray-300 w-full h-1;
+  }
+  
+  .card-content {
+    @apply mt-4 transition-all overflow-hidden max-h-72;
+  }
+  
+  .card-content-title {
+    @apply text-gray-900 font-medium text-xl;
+  }
+  
+  .card-content-subtitle {
+    @apply text-gray-900 font-normal text-lg;
+  }
+  
+  .card-list {
+    @apply mt-5 text-gray-600;
+  }
+  
+  .card-list-item {
+    @apply text-lg mb-4;
+  }
+  
+  .card-toggle-btn {
+    @apply toggle-btn text-fg-brand-primary font-medium mt-4 text-base;
+  }
+  
+  /* Last Card (Enterprise Plan) */
+  .last-card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm;
+  }
+  
+
+  /*  */
+  .custom-container {
+    @apply max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24;
+  }
+.section-heading {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-4 max-w-3xl;
+  }
+  
+  .section-description {
+    @apply text-gray-600 mb-8 text-base md:text-lg lg:text-xl;
+  }
+  
+  .sidebar {
+    @apply relative lg:w-1/3;
+  }
+  
+  .content-box {
+    @apply cursor-pointer bg-white p-4 border border-gray-200 rounded-lg shadow-sm;
+  }
+  
+  .content-box-title {
+    @apply text-lg md:text-xl lg:text-2xl font-semibold text-gray-800;
+  }
+  
+  .content-box-description {
+    @apply text-gray-600 text-base md:text-lg;
+  }
+  
+  .scroll-indicator {
+    @apply absolute top-0 w-1 bg-gray-200;
+  }
+  
+  .content-box.active {
+    @apply border-2 border-blue-500;
+  }
+  
+  .lg\:w-2\/3 {
+    @apply lg:w-2/3;
+  }
+  
+  img {
+    @apply rounded-none shadow-none;
+  }
+  
+
+  /*  */
+  /* utility.css */
+
+/* General Section Styling */
+.section-custom-container {
+    @apply max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24;
+  }
+  
+  /* Heading Styling */
+  .section-heading {
+    @apply text-center text-xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-10;
+  }
+  
+  /* Card Container Styling */
+  .card-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center;
+  }
+  
+  /* Card Styling */
+  .card {
+    @apply flex items-center justify-center w-full h-36 bg-bg-secondary rounded-lg shadow-sm;
+  }
+  
+  /* Icon Styling */
+  .icon {
+    @apply text-base md:text-3xl;
+  }
+  
+  /* Text Styling */
+  .card-text {
+    @apply ml-2 font-semibold text-gray-700 text-base lg:text-2xl;
+  }
+  
+  /*  */
+  /* utility.css */
+
+/* General Section Styling */
+.section-container {
+    @apply max-w-[91rem] mx-auto lg:py-24 py-16 px-6 sm:px-12 lg:px-24;
+  }
+  
+  /* Grid Styling */
+  .two-column-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+  }
+  
+  /* Left Section Styling */
+  .left-section {
+    @apply space-y-4;
+  }
+  
+  .new-feature-text {
+    @apply text-text-brand-secondary-alt font-semibold;
+  }
+  
+  .section-heading {
+    @apply text-4xl lg:text-5xl font-semibold text-gray-900 mt-2;
+  }
+  
+  .section-description {
+    @apply text-gray-600 mt-4 md:text-xl pr-5;
+  }
+  
+  /* Right Section Styling */
+  .right-section {
+    @apply bg-transparent rounded-lg overflow-y-auto max-h-[22rem] py-6 px-4 lg:p-6 border-none custom-scrollbar;
+  }
+  
+  .feature-list {
+    @apply space-y-4;
+  }
+  
+  .feature-item {
+    @apply space-y-2;
+  }
+  
+  .feature-title {
+    @apply text-xl font-bold text-text-primary;
+  }
+  
+  .feature-description {
+    @apply text-gray-600 text-lg;
+  }
+  
+
+  /*  */
+  /* utility.css */
+
+/* Contact Section Styling */
+.contact-section {
+    @apply flex flex-col md:flex-row justify-between max-w-[91rem] mx-auto lg:py-12 py-8 px-6 sm:px-12 lg:px-24;
+  }
+  
+  .contact-left {
+    @apply text-center md:text-left;
+  }
+  
+  .contact-heading {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold text-text-primary;
+  }
+  
+  .contact-phone {
+    @apply text-lg md:text-xl lg:text-2xl text-text-primary mt-2;
+  }
+  
+  .contact-description {
+    @apply text-base md:text-lg lg:text-xl text-gray-500 mt-1;
+  }
+  
+  .contact-button {
+    @apply px-8 py-4 bg-bg-brand-solid text-white text-sm font-medium rounded-lg shadow-md hover:bg-orange-700 transition duration-300;
+  }
+  
+
+  /* Testimonial Section Styling */
+.testimonial-section {
+    @apply max-w-[91rem] mx-auto px-4 sm:px-6 lg:px-8 lg:py-24 py-16 md:px-12 text-center;
+  }
+  
+  .testimonial-text {
+    @apply text-lg md:text-xl lg:text-4xl font-medium text-gray-800 leading-relaxed max-w-5xl mx-auto;
+  }
+  
+  .user-details {
+    @apply mt-6 flex flex-col items-center;
+  }
+  
+  .user-image {
+    @apply w-12 md:w-16 h-12 md:h-16 rounded-full shadow-md mt-3;
+  }
+  
+  .user-name {
+    @apply mt-3 font-semibold text-base md:text-lg text-gray-800;
+  }
+  
+  .user-title {
+    @apply text-gray-500 text-base md:text-lg;
+  }
+  
+  .star-ratings {
+    @apply flex mt-3 space-x-1;
+  }
+  
+  .star-icon {
+    @apply w-5 h-5 text-yellow-500;
+  }
+  
+  .pagination {
+    @apply flex mt-4 space-x-2;
+  }
+  
+  .pagination-dot {
+    @apply w-2.5 h-2.5 bg-gray-300 rounded-full;
+  }
+  
+  .pagination-dot-active {
+    @apply bg-orange-600;
+  }
+
+  /*  */
+
+/* Blog Section Styling */
+.blog-section {
+    @apply max-w-[91rem] mx-auto lg:py-12 py-8 px-6 sm:px-12 lg:px-24;
+  }
+  
+  .blog-header {
+    @apply text-text-brand-secondary-alt text-sm font-semibold mb-4;
+  }
+  
+  .blog-title {
+    @apply text-4xl md:text-5xl font-semibold mb-4 lg:mb-6;
+  }
+  
+  .blog-description {
+    @apply text-gray-600 text-base md:text-lg lg:text-xl;
+  }
+  
+  .blog-buttons {
+    @apply flex mx-auto justify-center space-x-0 flex-wrap rounded-md bg-bg-secondary w-fit border-2 border-bg-secondary mt-10 md:mt-14 lg:mt-16;
+  }
+  
+  .blog-button {
+    @apply px-4 py-2 text-sm font-medium text-text-secondary bg-transparent hover:bg-bg-primary hover:shadow-lg focus:bg-bg-primary focus:shadow-lg focus:border-2 focus:border-border-primary active:bg-bg-primary active:shadow-lg active:border-2 active:border-border-primary rounded-md;
+  }
+  
+  .blog-cards {
+    @apply mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:mt-14 lg:mt-16;
+  }
+  
+  .blog-card {
+    @apply rounded-none shadow-none overflow-hidden group;
+  }
+  
+  .blog-card-image {
+    @apply w-full h-72 object-cover;
+  }
+  
+  .blog-card-content {
+    @apply py-4;
+  }
+  
+  .blog-card-title {
+    @apply text-lg md:text-xl lg:text-2xl font-semibold mb-2 group-hover:text-orange-600;
+  }
+  
+  .blog-card-description {
+    @apply text-gray-600 mb-4;
+  }
+  
+  .blog-card-link {
+    @apply text-orange-600 font-semibold;
+  }
+  
