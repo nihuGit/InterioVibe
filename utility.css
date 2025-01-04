@@ -14,7 +14,7 @@
   }
   
   .contact-button {
-    @apply bg-bg-brand-solid text-button-primary-fg px-8 py-4 text-sm sm:text-base font-medium rounded-md hover:bg-orange-500 transition;
+    @apply bg-bg-brand-solid text-button-primary-fg px-8 py-4 text-sm sm:text-base font-medium rounded-md hover:bg-orange-800 transition duration-300 ease-in-out delay-100;
   }
   
   .image-container {
@@ -202,7 +202,7 @@
   }
   
   .button {
-    @apply bg-bg-brand-solid text-white py-4 px-8 mx-auto text-sm sm:text-base font-medium rounded-xl hover:bg-orange-700 transition;
+    @apply bg-bg-brand-solid text-white py-4 px-8 mx-auto text-sm sm:text-base font-medium rounded-xl hover:bg-orange-800 transition duration-300 ease-in-out delay-100;
   }
   
   /* Stats Grid */
@@ -525,7 +525,7 @@
   }
   
   .contact-button {
-    @apply px-8 py-4 bg-bg-brand-solid text-white text-sm font-medium rounded-lg shadow-md hover:bg-orange-700 transition duration-300;
+    @apply px-8 py-4 bg-bg-brand-solid text-white text-sm font-medium rounded-lg shadow-md hover:bg-orange-800 transition duration-300 ease-in-out delay-100;
   }
   
 
